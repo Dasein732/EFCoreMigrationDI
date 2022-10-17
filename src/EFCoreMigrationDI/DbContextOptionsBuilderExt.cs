@@ -12,11 +12,11 @@ namespace Dasein.EntityFrameworkCore.Migrations
         ///     </para>
         /// </summary>
         /// <returns>The same builder instance so that multiple calls can be chained.</returns>
-        public static DbContextOptionsBuilder UseDependencyInjectionInMigrations(this DbContextOptionsBuilder opt)
+        public static DbContextOptionsBuilder UseDependencyInjectionInMigrations(this DbContextOptionsBuilder optionsBuilder)
         {
-            opt.ReplaceService<IMigrationsAssembly, DIMigrationsAssembly>();
+            optionsBuilder.ReplaceService<IMigrationsAssembly, DIMigrationsAssembly>();
 
-            return opt;
+            return optionsBuilder;
         }
 
         /// <summary>
@@ -27,12 +27,12 @@ namespace Dasein.EntityFrameworkCore.Migrations
         /// </summary>
         /// <param name="serviceProvider">The service provider to be used.</param>
         /// <returns>The same builder instance so that multiple calls can be chained.</returns>
-        public static DbContextOptionsBuilder UseDependencyInjectionInMigrations(this DbContextOptionsBuilder opt, IServiceProvider serviceProvider)
+        public static DbContextOptionsBuilder UseDependencyInjectionInMigrations(this DbContextOptionsBuilder optionsBuilder, IServiceProvider serviceProvider)
         {
-            opt.ReplaceService<IMigrationsAssembly, DIMigrationsAssembly>();
-            opt.UseApplicationServiceProvider(serviceProvider);
+            optionsBuilder.ReplaceService<IMigrationsAssembly, DIMigrationsAssembly>();
+            optionsBuilder.UseApplicationServiceProvider(serviceProvider);
 
-            return opt;
+            return optionsBuilder;
         }
     }
 }
