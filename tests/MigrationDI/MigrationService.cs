@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 
 namespace MigrationDI
 {
@@ -15,17 +16,10 @@ namespace MigrationDI
         public async Task StartAsync(CancellationToken cancellationToken)
         {
 
-            //if(Ctx.Database.GetPendingMigrations().Any())
-            //{
-            //    Ctx.Database.Migrate();
-            //}
-
-            var zz = Ctx.Model
-                .GetEntityTypes()
-                .Where(x => x.Name == "MigrationDI.TestTable")
-                .First();
-
-            var z = zz.GetAnnotations();
+            if(Ctx.Database.GetPendingMigrations().Any())
+            {
+                Ctx.Database.Migrate();
+            }
 
             await Task.CompletedTask;
         }

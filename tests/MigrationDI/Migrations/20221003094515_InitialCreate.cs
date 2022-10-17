@@ -16,9 +16,6 @@ namespace MigrationDI.Migrations
 
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-
-
-            var zz = Serv.ProvideName();
             migrationBuilder.CreateTable(
                 name: Serv.ProvideName(),
                 columns: table => new

@@ -1,4 +1,5 @@
 ﻿using Dasein.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MigrationDI;
@@ -21,9 +22,12 @@ internal class Result
 
         services.AddScoped<IColumnNameProvider, ColumnNameProvider>();
 
+        var builder = new DbContextOptionsBuilder();
+        builder.UseDependencyInjectionInMigrations(services.BuildServiceProvider());
+
         services.AddDbContext<TestContext>(opt =>
         {
-            opt.UseDependencyInjectionInMigrations(services.BuildServiceProvider());
+            opt.UseDependencyInjectionInMigrations();
         });
     }
 
