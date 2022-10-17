@@ -22,6 +22,7 @@
 		<PackageLicenseFile>License.md</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageId>Dasein.MigrationDI</PackageId>
+		<Description>Set of extension methods providing DI to EF Core for SQL Server</Description>
 		<PackageTags> Entity;Framework;Core;entity-framework-core;EF;Data;O/RM;EntityFrameworkCore;EFCore;SQL;Server;DI;Dependency;Injection</PackageTags>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<RepositoryUrl>https://github.com/Dasein732/EFCoreMigrationDI</RepositoryUrl>

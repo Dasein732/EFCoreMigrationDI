@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace Dasein.EntityFrameworkCore.Migrations
+﻿namespace Dasein.EntityFrameworkCore.Migrations
 {
     public static class DbContextOptionsBuilderExt
     {
