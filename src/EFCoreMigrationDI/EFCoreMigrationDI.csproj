@@ -7,11 +7,13 @@
 		<WarningsAsErrors>Nullable</WarningsAsErrors>
 		<RootNamespace>Dasein.EntityFrameworkCore.Migrations</RootNamespace>
 		<AnalysisLevel>latest-all</AnalysisLevel>
-
+		<Deterministic>true</Deterministic>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<AssemblyVersion>6.0.10.0</AssemblyVersion>
-		<FileVersion>6.0.10.3</FileVersion>
-		<VersionPrefix>6.0.10.3</VersionPrefix>
+		<FileVersion>6.0.10.4</FileVersion>
+		<VersionPrefix>6.0.10.4</VersionPrefix>
 		<Title>EF Core Migration Dependency Injection</Title>
 		<Authors>Miloš Todorović</Authors>
 		<Description>Set of extension methods providing DI to EF Core for SQL Server</Description>
@@ -28,7 +30,7 @@
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		
-		<PackageReleaseNotes>Add Source Link</PackageReleaseNotes>
+		<PackageReleaseNotes>Enable deterministic builds</PackageReleaseNotes>
 		
 	</PropertyGroup>
 
