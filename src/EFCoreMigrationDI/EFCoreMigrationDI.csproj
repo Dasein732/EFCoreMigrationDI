@@ -11,8 +11,7 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<AssemblyVersion>6.0.10.0</AssemblyVersion>
 		<FileVersion>6.0.10.1</FileVersion>
-		<VersionPrefix>6.0.10</VersionPrefix>
-		<VersionSuffix>1</VersionSuffix>
+		<VersionPrefix>6.0.10.1</VersionPrefix>
 		<Title>EF Core Migration Dependency Injection</Title>
 		<Authors>Miloš Todorović</Authors>
 		<Description>Set of extension methods providing DI to EF Core for SQL Server</Description>
