@@ -7,11 +7,11 @@
 		<WarningsAsErrors>Nullable</WarningsAsErrors>
 		<RootNamespace>Dasein.EntityFrameworkCore.Migrations</RootNamespace>
 		<AnalysisLevel>latest-all</AnalysisLevel>
-		
+
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<AssemblyVersion>6.0.10.0</AssemblyVersion>
-		<FileVersion>6.0.10.2</FileVersion>
-		<VersionPrefix>6.0.10.2</VersionPrefix>
+		<FileVersion>6.0.10.3</FileVersion>
+		<VersionPrefix>6.0.10.3</VersionPrefix>
 		<Title>EF Core Migration Dependency Injection</Title>
 		<Authors>Miloš Todorović</Authors>
 		<Description>Set of extension methods providing DI to EF Core for SQL Server</Description>
@@ -24,9 +24,11 @@
 		<PackageTags> Entity;Framework;Core;entity-framework-core;EF;Data;O/RM;EntityFrameworkCore;EFCore;SQL;Server;DI;Dependency;Injection</PackageTags>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<RepositoryUrl>https://github.com/Dasein732/EFCoreMigrationDI</RepositoryUrl>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<PackageReleaseNotes>Add Symbols</PackageReleaseNotes>
+		
+		<PackageReleaseNotes>Add Source Link</PackageReleaseNotes>
 		
 	</PropertyGroup>
 
@@ -37,6 +39,10 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="[6.0.0,6.1)" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 	</ItemGroup>
 
 </Project>
