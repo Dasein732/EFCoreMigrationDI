@@ -4,11 +4,11 @@
 
 namespace MigrationDI.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         public IColumnNameProvider Serv { get; }
 
-        public InitialCreate(IColumnNameProvider serv)
+        public Initial(IColumnNameProvider serv)
         {
             Serv = serv;
         }

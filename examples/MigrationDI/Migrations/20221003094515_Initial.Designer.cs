@@ -13,7 +13,7 @@ namespace MigrationDI.Migrations
 {
     [DbContext(typeof(TestContext))]
     [Migration("20221003094515_InitialCreate")]
-    partial class InitialCreate
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
