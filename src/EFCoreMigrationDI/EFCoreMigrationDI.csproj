@@ -18,8 +18,7 @@
 		<Description>Set of extension methods providing DI to EF Core for SQL Server</Description>
 		<Company />
 		<Product />
-		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-		<PackageLicenseFile>License.md</PackageLicenseFile>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageId>Dasein.MigrationDI</PackageId>
 		<Description>Set of extension methods providing DI to EF Core for SQL Server</Description>
@@ -30,6 +29,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="README.md"/>
 		<None Include="..\..\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
 	</ItemGroup>
 
