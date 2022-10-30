@@ -8,16 +8,16 @@ using MigrationDI;
 
 #nullable disable
 
-namespace MigrationDI.Migrations
+namespace Project.Migrations
 {
-    [DbContext(typeof(TestContext))]
-    partial class TestContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ExampleContext))]
+    partial class ExampleContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.9")
+                .HasAnnotation("ProductVersion", "6.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);

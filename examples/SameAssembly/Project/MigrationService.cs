@@ -1,17 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
+using MigrationDI;
 
-namespace MigrationDI
+namespace Project
 {
     internal class MigrationService : IHostedService
     {
 
-        public MigrationService(TestContext ctx)
+        public MigrationService(ExampleContext ctx)
         {
             Ctx = ctx;
         }
 
-        public TestContext Ctx { get; }
+        public ExampleContext Ctx { get; }
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {

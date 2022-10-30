@@ -2,27 +2,28 @@
 
 #nullable disable
 
-namespace MigrationDI.Migrations
+namespace Project.Migrations
 {
-    public partial class Initial : Migration
+    public partial class InitialCreate : Migration
     {
-        public IColumnNameProvider Serv { get; }
+        private IColumnNameProvider columnNameProvider { get; }
 
-        public Initial(IColumnNameProvider serv)
+        public InitialCreate(IColumnNameProvider columnNameProvider)
         {
-            Serv = serv;
+            this.columnNameProvider = columnNameProvider;
         }
-
 
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            var columnName = columnNameProvider.ProvideName();
+
             migrationBuilder.CreateTable(
-                name: Serv.ProvideName(),
+                name: "TestTable",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
                     Test1 = table.Column<string>(type: "nchar(10)", fixedLength: true, maxLength: 10, nullable: true),
-                    Test2 = table.Column<short>(type: "smallint", nullable: true)
+                    Test2 = table.Column<short>(type: "smallint", name: columnName, nullable: true)
                 },
                 constraints: table =>
                 {

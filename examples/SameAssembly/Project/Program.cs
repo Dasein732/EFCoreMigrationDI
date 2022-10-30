@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MigrationDI;
+using Project;
 using System.Reflection;
 
-internal class Result
+internal class Program
 {
-
     public static async Task Main(string[] args)
     {
         await Host.CreateDefaultBuilder(args)
@@ -25,10 +25,9 @@ internal class Result
         var builder = new DbContextOptionsBuilder();
         builder.UseDependencyInjectionInMigrations(services.BuildServiceProvider());
 
-        services.AddDbContext<TestContext>(opt =>
+        services.AddDbContext<ExampleContext>(opt =>
         {
             opt.UseDependencyInjectionInMigrations();
         });
     }
-
 }

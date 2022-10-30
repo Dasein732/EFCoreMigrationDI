@@ -1,10 +1,10 @@
-﻿namespace MigrationDI
+﻿namespace Project
 {
     internal class ColumnNameProvider : IColumnNameProvider
     {
         public string ProvideName()
         {
-            return "testTest";
+            return "custom_column_name";
         }
     }
 }

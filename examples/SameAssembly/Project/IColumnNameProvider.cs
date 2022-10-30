@@ -1,4 +1,4 @@
-﻿namespace MigrationDI
+﻿namespace Project
 {
     public interface IColumnNameProvider
     {
