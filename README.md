@@ -1,7 +1,14 @@
 # EFCoreMigrationDI
 
-Set of extension methods providing DI support to SQL Server migrations for EF Core. 
-This will most likely work for other providers but I haven't got around to testing it yet.
+Set of extension methods providing DI support to relational provider migrations for EF Core. 
+Tested on SQL Server and SQLite.
+
+## Purpose
+
+The library is intended to smooth out bumpy interactions between multiple contexts in code first environment,
+that can't be handled other than having multiple sets of migration files and preventing those issues from surfacing into runtime code.
+e.g. doing a complex update or delete operation during the migration, such as joining 2 tables 
+in different databases where the table names may vary between the deployments.
 
 ## Usage
 
@@ -19,11 +26,11 @@ then
 
     public partial class ExampleMigration : Migration
     {
-        public IConfiguration Config { get; }
+        private readonly IConfiguration config;
 
         public InitialCreate(IConfiguration config)
         {
-            Config = config;
+            this.config = config;
         }
 
         //protected override void Up(MigrationBuilder migrationBuilder)
