@@ -11,8 +11,8 @@
 		
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<AssemblyVersion>6.0.10.0</AssemblyVersion>
-		<FileVersion>6.0.10.4</FileVersion>
-		<VersionPrefix>6.0.10.4</VersionPrefix>
+		<FileVersion>6.0.10.5</FileVersion>
+		<VersionPrefix>6.0.10.5</VersionPrefix>
 		<Title>EF Core Migration Dependency Injection</Title>
 		<Authors>Miloš Todorović</Authors>
 		<Description>Set of extension methods providing DI to EF Core migrations for relational providers</Description>

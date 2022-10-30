@@ -37,3 +37,6 @@ then
 
         //protected override void Down(MigrationBuilder migrationBuilder)
     }
+
+I'll be using EF's version as a version prefix just to make it easier to handle potential breaking changes
+on specific versions.
