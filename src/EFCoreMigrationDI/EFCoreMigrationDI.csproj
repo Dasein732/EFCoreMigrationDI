@@ -21,14 +21,14 @@
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageId>Dasein.MigrationDI</PackageId>
-		<Description>Set of extension methods providing DI to EF Core for SQL Server</Description>
+		<Description>Set of extension methods providing DI to relational providers for EF Core</Description>
 		<PackageTags> Entity;Framework;Core;entity-framework-core;EF;Data;O/RM;EntityFrameworkCore;EFCore;SQL;Server;DI;Dependency;Injection</PackageTags>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<RepositoryUrl>https://github.com/Dasein732/EFCoreMigrationDI</RepositoryUrl>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		
+
 		<PackageReleaseNotes>Add support for .NET 7</PackageReleaseNotes>
 	</PropertyGroup>
 
