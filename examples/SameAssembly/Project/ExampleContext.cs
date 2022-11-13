@@ -25,7 +25,7 @@ namespace MigrationDI
         {
             if(!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=MigrationExample;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=MigrationExample;Integrated Security=True;Encrypt=False;");
             }
         }
 

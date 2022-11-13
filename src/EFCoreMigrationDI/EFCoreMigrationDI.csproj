@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<RootNamespace>Dasein.EntityFrameworkCore.Migrations</RootNamespace>
 		<AnalysisLevel>latest-all</AnalysisLevel>
@@ -10,9 +10,9 @@
 		<LangVersion>Latest</LangVersion>
 		
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<AssemblyVersion>6.0.10.0</AssemblyVersion>
-		<FileVersion>6.0.10.5</FileVersion>
-		<VersionPrefix>6.0.10.5</VersionPrefix>
+		<AssemblyVersion>7.0.0.0</AssemblyVersion>
+		<FileVersion>7.0.0.0</FileVersion>
+		<VersionPrefix>7.0.0.0</VersionPrefix>
 		<Title>EF Core Migration Dependency Injection</Title>
 		<Authors>Miloš Todorović</Authors>
 		<Description>Set of extension methods providing DI to EF Core migrations for relational providers</Description>
@@ -29,7 +29,12 @@
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		
-		<PackageReleaseNotes>Expand support to Net Standard 2.0 and Net Standard 2.1</PackageReleaseNotes>
+		<PackageReleaseNotes>Add support for .NET 7</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net7.0' ">
+		<Nullable>enable</Nullable>
+		<WarningsAsErrors>Nullable</WarningsAsErrors>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
@@ -45,6 +50,10 @@
 	<ItemGroup>
 		<None Include="..\..\README.md" Pack="true" PackagePath="README.md" />
 		<None Include="..\..\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net7.0' ">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="[7.0.0,8.0.0)" />
 	</ItemGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' ">

@@ -11,7 +11,7 @@ internal class Program
     public static async Task Main(string[] args)
     {
         await Host.CreateDefaultBuilder(args)
-          .UseContentRoot(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location))
+          .UseContentRoot(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!)
           .ConfigureServices(AddMigratorServices)
           .RunConsoleAsync();
     }
